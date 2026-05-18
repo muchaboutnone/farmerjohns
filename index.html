@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coming Soon | Farmer Johns Organics</title>
+
   <style>
     /* Reset */
     * {
@@ -13,49 +14,71 @@
       font-family: 'Helvetica Neue', Arial, sans-serif;
     }
 
-    body, html {
-      height: 100%;
+    html,
+    body {
+      width: 100%;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body {
       background: linear-gradient(135deg, #a8e6cf, #dcedc1);
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       color: #2e2e2e;
+      padding: 1rem;
     }
 
     .container {
+      width: 100%;
       max-width: 600px;
       padding: 2rem;
       background: rgba(255, 255, 255, 0.85);
       border-radius: 15px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       animation: fadeIn 1.5s ease-in-out;
+      overflow-wrap: break-word;
     }
 
     h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
       color: #3a5a40;
+      line-height: 1.2;
     }
 
     p {
       font-size: 1.2rem;
       margin-bottom: 1.5rem;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .logo {
       width: 120px;
+      max-width: 100%;
       margin-bottom: 1rem;
     }
 
+    .subscribe {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
     .subscribe input[type="email"] {
+      flex: 1 1 250px;
+      min-width: 0;
       padding: 0.8rem 1rem;
       border-radius: 30px;
       border: 1px solid #ccc;
-      width: 70%;
-      max-width: 300px;
-      margin-right: 0.5rem;
+      outline: none;
+      width: 100%;
+      max-width: 320px;
     }
 
     .subscribe button {
@@ -65,7 +88,8 @@
       background: #3a5a40;
       color: white;
       cursor: pointer;
-      transition: 0.3s;
+      transition: 0.3s ease;
+      white-space: nowrap;
     }
 
     .subscribe button:hover {
@@ -76,22 +100,99 @@
       margin-top: 1.5rem;
       font-size: 0.9rem;
       color: #555;
+      line-height: 1.5;
+    }
+
+    /* Prevent any element from overflowing */
+    img,
+    video,
+    iframe,
+    input,
+    button,
+    div,
+    section {
+      max-width: 100%;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+      body {
+        padding: 0.75rem;
+      }
+
+      .container {
+        padding: 1.5rem;
+        border-radius: 12px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .subscribe {
+        flex-direction: column;
+      }
+
+      .subscribe input[type="email"],
+      .subscribe button {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        padding: 1.2rem;
+      }
+
+      h1 {
+        font-size: 1.7rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <p>Farmer John Organics</p>
+    <p>Farmer Johns Organics</p>
+
     <h1>We’re Growing Something New!</h1>
-    <p>Our website is under construction. Stay tuned for updates and fresh content coming soon!</p>
+
+    <p>
+      Our website is under construction. Stay tuned for updates
+      and fresh content coming soon!
+    </p>
+
+    <!-- Optional subscribe form -->
+    <!--
+    <div class="subscribe">
+      <input type="email" placeholder="Enter your email" />
+      <button>Notify Me</button>
+    </div>
+    -->
 
     <footer>
-      &copy; 2026 Farmer Johns Organics. All rights reserved.
+      &copy; 2026 Farmer John Organics. All rights reserved.
     </footer>
   </div>
 </body>
