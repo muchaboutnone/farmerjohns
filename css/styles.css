@@ -167,6 +167,7 @@ p {
     url("../media/IMG_9246.png");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -592,6 +593,7 @@ footer {
       url("../media/IMG_9246.png");
     background-size: cover;
     background-position: center;
+    background-attachment: scroll;
   }
 
   .hero h1 {
