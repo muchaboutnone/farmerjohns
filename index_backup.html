@@ -160,17 +160,12 @@
         Have questions or want to partner with us? Fill in the form below and we’ll get back to you.
       </p>
 
-      <form class="contact-form" action="#" method="post">
-
+      <form id="contactForm" class="contact-form">
+        <input type="hidden" name="access_key" value="4928be34-d69e-4b5e-9c92-37250f49cd25">
+        <input type="hidden" name="from_name" value="Site Enquiry">
         <!-- Name -->
         <div class="form-group">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name"
-            required
-          />
+          <input type="text" id="name" name="name" placeholder="Name" required/>
         </div>
 
         <!-- Contact -->
@@ -192,17 +187,11 @@
             name="email"
             placeholder="Email Address"
             required
+            autocomplete="email"
+            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+            title="Please enter a valid email address"
           />
         </div>
-
-        <div class="form-group">
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            placeholder="Subject"
-          />
-      </div>
 
         <!-- Message -->
         <div class="form-group">
@@ -215,17 +204,20 @@
           ></textarea>
         </div>
 
+        <div class="h-captcha" data-captcha="true"></div>
 
+        <div class="form-actions">
+          <button type="submit" class="button" id="submitBtn">Send</button>
+          <span id="result" class="fade"></span>
+        </div>
 
-        <button type="submit" class="button">
-          Send Message
-        </button>
+        
 
       </form>
 
   </div>
-  <div>
-    <img src="media/edit.png" alt="">
+  <div class="contact-image">
+    <img src="media/IMG_1391.jpeg" alt="">
   </div>
   </div>
 
@@ -247,84 +239,10 @@
   ↑
 </button>
 
-<!-- ================= SCRIPTS ================= -->
 <script src="https://unpkg.com/scrollreveal"></script>
-
-<script>
-
- document.addEventListener("DOMContentLoaded", () => {
-
-  /* ================= MOBILE NAV ================= */
-  const toggle = document.getElementById("navbarToggle");
-  const menu = document.getElementById("navbarMenu");
-
-  if (toggle && menu) {
-    toggle.addEventListener("click", () => {
-      menu.classList.toggle("active");
-    });
-
-    // close menu when clicking a link
-    document.querySelectorAll(".navbar__link").forEach(link => {
-      link.addEventListener("click", () => {
-        menu.classList.remove("active");
-      });
-    });
-
-    // close when clicking outside
-    document.addEventListener("click", (e) => {
-      const clickedInsideMenu = menu.contains(e.target);
-      const clickedToggle = toggle.contains(e.target);
-
-      if (!clickedInsideMenu && !clickedToggle) {
-        menu.classList.remove("active");
-      }
-    });
-  }
-
-  /* ================= NAVBAR SCROLL EFFECT ================= */
-  const navbar = document.getElementById("navbar");
-
-  if (navbar) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 80) {
-        navbar.classList.add("scrolled");
-      } else {
-        navbar.classList.remove("scrolled");
-      }
-    });
-  }
-
-  /* ================= SCROLL REVEAL ================= */
-  if (typeof ScrollReveal !== "undefined") {
-
-    ScrollReveal().reveal('.hero', {
-      distance: '60px',
-      duration: 1400,
-      origin: 'bottom'
-    });
-
-    ScrollReveal().reveal('.about-container', {
-      distance: '60px',
-      duration: 1200,
-      origin: 'bottom'
-    });
-
-    ScrollReveal().reveal('.services-grid li', {
-      interval: 150,
-      distance: '40px'
-    });
-
-    ScrollReveal().reveal('.stat-card', {
-      interval: 150,
-      distance: '40px'
-    });
-
-  } else {
-    console.warn("ScrollReveal is not loaded.");
-  }
-
-});
-</script>
-
+<script src="js/scripts.js"></script>
+<script src="js/back-to-top-btn.js"></script>
+<script src="https://web3forms.com/client/script.js" async defer></script>
+<script src="js/scripts.js" defer></script>
 </body>
 </html>

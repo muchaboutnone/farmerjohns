@@ -1,15 +1,18 @@
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 400) {
-    document.getElementById("myBtn").style.display = "block";
-  } else {
-    document.getElementById("myBtn").style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
+// Scroll to top when button is clicked
 function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 }
+
+// Show/hide scroll-to-top button
+const myBtn = document.getElementById("myBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    myBtn.style.display = "block";
+  } else {
+    myBtn.style.display = "none";
+  }
+});
