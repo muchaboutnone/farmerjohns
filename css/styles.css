@@ -166,8 +166,8 @@ p {
     linear-gradient(rgba(20,35,24,0.45),rgba(20,35,24,0.35)),
     url("../media/IMG_9246.png");
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: center top;
+  will-change: background-position;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -515,13 +515,36 @@ footer {
 
 /* ================= TABLET ================= */
 @media (max-width: 1024px) {
-  .about-container,
-  .contact-container {
+  /* Keep about stacked but show contact sections side-by-side on tablet */
+  .about-container {
     flex-direction: column;
   }
 
   .about-image img {
     border-radius: 15px;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .contact-text,
+  .contact-image {
+    flex: 1 1 50%;
+    min-width: 0;
+  }
+
+  .contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius);
+    display: block;
   }
 
   .services-grid,
@@ -592,7 +615,8 @@ footer {
       linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.45)),
       url("../media/IMG_9246.png");
     background-size: cover;
-    background-position: center;
+    background-position: center top;
+    will-change: background-position;
     background-attachment: scroll;
   }
 
