@@ -27,6 +27,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  /* ================= HERO PARALLAX ================= */
+  const hero = document.getElementById("hero");
+  if (hero) {
+    const updateHeroParallax = () => {
+      const offset = window.scrollY * 0.4;
+      hero.style.backgroundPosition = `center ${offset}px`;
+    };
+
+    window.addEventListener("scroll", () => {
+      window.requestAnimationFrame(updateHeroParallax);
+    });
+
+    updateHeroParallax();
+  }
+
   /* ================= NAVBAR SCROLL EFFECT ================= */
   const navbar = document.getElementById("navbar");
 
