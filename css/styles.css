@@ -587,9 +587,11 @@ footer {
   }
 
   #hero {
-    background-image:
+    background:
       linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.45)),
-      url(../media/IMG_1422.jpeg);
+      url("../media/IMG_9246.png");
+    background-size: cover;
+    background-position: center;
   }
 
   .hero h1 {
