@@ -81,7 +81,7 @@ p {
   max-width: 1200px;
   height: 75px;
   border-radius: 20px;
-  background: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.55);
   border: 1px solid rgba(255,255,255,0.5);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -164,7 +164,7 @@ p {
   height: 100vh;
   background:
     linear-gradient(rgba(20,35,24,0.45),rgba(20,35,24,0.35)),
-    url("../media/IMG_9246.png");
+    url("../media/IMG_9246-min.png");
   background-size: cover;
   background-position: center top;
   will-change: background-position;
@@ -276,7 +276,7 @@ p {
 .services-grid li {
   padding: 2rem;
   border-radius: var(--radius);
-  background: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.55);
   color: var(--text-dark);
   border: 1px solid rgba(255,255,255,0.5);
   backdrop-filter: blur(12px);
@@ -613,7 +613,7 @@ footer {
   #hero {
     background:
       linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.25)),
-      url("../media/IMG_9273.JPG");
+      url("../media/IMG_9273-min.JPG");
     background-size: cover;
     background-position: center top;
     will-change: background-position;
