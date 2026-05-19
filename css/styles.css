@@ -612,8 +612,8 @@ footer {
 
   #hero {
     background:
-      linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.45)),
-      url("../media/IMG_9246.png");
+      linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.25)),
+      url("../media/IMG_9273.JPG");
     background-size: cover;
     background-position: center top;
     will-change: background-position;
